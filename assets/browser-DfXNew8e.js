@@ -18699,7 +18699,7 @@ const _HttpResponse = class _HttpResponse extends FetchResponse$1 {
 _c2 = bodyType;
 let HttpResponse = _HttpResponse;
 checkGlobals();
-const API_URL = "http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com";
+const API_URL = "https://bunju20.github.io/react-shopping-products/api";
 const initializeCartItems = () => {
   return Array.from({ length: 4 }, (_, index) => {
     const productId = index + 2;

@@ -10035,7 +10035,7 @@ const API_ERROR_MESSAGES = {
   500: "서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요."
 };
 async function fetcher(endpoint, options = {}) {
-  const API_URL = "http://techcourse-lv2-alb-974870821.ap-northeast-2.elb.amazonaws.com";
+  const API_URL = "https://bunju20.github.io/react-shopping-products/api";
   const TOKEN = "YnVuanUyMDpwYXNzd29yZA==";
   const requestHeaders = {
     "Content-Type": "application/json",
@@ -10806,12 +10806,14 @@ const resetCss = css`
 async function startApp() {
   console.log("MSW 초기화 중...");
   try {
-    const { worker } = await __vitePreload(() => import("./browser-RCm_SZDk.js"), true ? [] : void 0);
+    const { worker } = await __vitePreload(() => import("./browser-DfXNew8e.js"), true ? [] : void 0);
     console.log("MSW 워커 로드됨:", !!worker);
     await worker.start({
+      serviceWorker: {
+        // GitHub Pages의 base path를 고려한 경로
+        url: "/react-shopping-products/mockServiceWorker.js"
+      },
       onUnhandledRequest: "warn"
-    }).catch((error) => {
-      console.error("MSW 시작 실패:", error);
     });
     console.log("🔶 MSW 모의 서버가 성공적으로 시작되었습니다.");
   } catch (error) {
